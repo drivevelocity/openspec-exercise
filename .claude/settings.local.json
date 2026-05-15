@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx @angular/cli new weather-app --standalone --routing=false --style=css --skip-git --package-manager=npm)",
+      "Bash(npx ng *)",
+      "Bash(Copy-Item -Path weather-app\\\\* -Destination . -Recurse -Force -Exclude node_modules,dist)",
+      "Bash(npm install *)",
+      "Bash(npx openspec *)",
+      "Bash(Remove-Item -Force \"c:\\\\praca\\\\sandbox\\\\openspec-exercise\\\\openspec\\\\specs\\\\current-weather\\\\spec.md\")",
+      "Bash(curl -s \"https://geocoding-api.open-meteo.com/v1/search?name=Saint+Louis&count=5&language=en\")",
+      "Bash(python -m json.tool)",
+      "Bash(curl -s \"https://geocoding-api.open-meteo.com/v1/search?name=St+Louis+Missouri&count=5&language=en\")",
+      "Bash(curl -s \"https://geocoding-api.open-meteo.com/v1/search?name=St.+Louis&count=5&language=en\")"
+    ]
+  }
+}

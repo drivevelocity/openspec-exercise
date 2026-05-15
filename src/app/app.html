@@ -1,0 +1,19 @@
+<div class="container">
+  <h1 class="app-title">Weather</h1>
+
+  @if (loading()) {
+    <div class="state-message">Loading...</div>
+  } @else if (error()) {
+    <div class="state-message error">{{ error() }}</div>
+  } @else if (weather(); as w) {
+    <div class="weather-card">
+      <div class="city">{{ w.city }}</div>
+      <div class="temperature">{{ w.temperature }}&deg;C</div>
+      <div class="condition">{{ w.condition }}</div>
+      <div class="details">
+        <span>Humidity: {{ w.humidity }}%</span>
+        <span>Wind: {{ w.windSpeed }} km/h</span>
+      </div>
+    </div>
+  }
+</div>
