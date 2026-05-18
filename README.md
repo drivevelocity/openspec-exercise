@@ -14,14 +14,14 @@ A simple Angular weather app used in a hands-on training session on spec-driven 
 
 | Tool | Version | Install |
 |------|---------|---------|
-| Node.js | 18 LTS or later | https://nodejs.org |
+| Node.js | 20 LTS or later | https://nodejs.org |
 | OpenSpec | latest | `npm install -g @fission-ai/openspec` |
 | GitHub account | — | https://github.com |
 
 Verify your setup:
 
 ```bash
-node --version      # v18.x or higher
+node --version      # v20.19.0 or higher
 openspec --version  # any version printed
 ```
 
@@ -30,7 +30,7 @@ openspec --version  # any version printed
 1. Fork this repo on GitHub, then clone your fork:
 
 ```bash
-git clone https://github.com/<your-username>/openspec-exercise.git
+git clone https://github.com/michal-depta/openspec-exercise.git
 cd openspec-exercise
 npm install
 ng serve

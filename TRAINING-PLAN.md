@@ -78,7 +78,7 @@ Communicate the following to participants **at least one day before** the sessio
 
 | Tool | Version | Install |
 |------|---------|---------|
-| Node.js | 18 LTS or later | https://nodejs.org |
+| Node.js | 20 LTS or later | https://nodejs.org |
 | OpenSpec | latest | `npm install -g openspec` |
 | GitHub account | — | https://github.com |
 
@@ -87,7 +87,7 @@ Communicate the following to participants **at least one day before** the sessio
 Participants should run these commands and confirm they succeed:
 
 ```bash
-node --version      # should print v18.x or higher
+node --version      # should print v20.19.0 or higher
 openspec --version  # should print a version number
 ```
 
