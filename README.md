@@ -8,6 +8,8 @@ A simple Angular weather app used in a hands-on training session on spec-driven 
 | Claude Code | `/opsx:*` slash commands (`.claude/commands/`) |
 | GitHub Copilot | `/opsx-*` prompt files (`.github/prompts/`) |
 
+> **Note — expanded profile:** This repo ships with the full OpenSpec command set (`new`, `continue`, `ff`, `verify`, `sync`, `archive`, `bulk-archive`). A default `openspec init` installs only the `core` profile, whose starting point is `/opsx:propose` rather than `/opsx:new`. See [EXERCISES.md](EXERCISES.md#about-this-setup) for a comparison of the two workflows.
+
 ## Prerequisites
 
 | Tool | Version | Install |

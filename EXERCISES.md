@@ -11,6 +11,35 @@ Each exercise follows the same full cycle:
 
 ---
 
+## About this setup
+
+This repo uses the **expanded OpenSpec workflow** — the full command set, configured for explicit step-by-step artifact authoring. This is intentional for learning, but it is not what you get from a default `openspec init` in a fresh repo.
+
+**Default (`core` profile) — what a fresh install provides:**
+
+```
+/opsx:propose ──► /opsx:apply ──► /opsx:sync ──► /opsx:archive
+```
+
+In the `core` profile, `/opsx:propose` does in one step what `new` + `continue` does here: it scaffolds the change directory and generates all planning artifacts (proposal, specs, design, tasks) at once.
+
+**Expanded profile — what this repo uses:**
+
+```
+/opsx:new ──► /opsx:continue (×N) ──► /opsx:apply ──► /opsx:verify ──► /opsx:sync ──► /opsx:archive
+```
+
+This lab uses `continue` deliberately. Going artifact-by-artifact forces you to think through each piece before moving on — which is the whole point of the exercise. Once you are comfortable with the workflow, you will likely prefer `propose` (or `/opsx:ff`) for day-to-day speed.
+
+To enable the expanded workflow in your own repo after the lab:
+
+```bash
+openspec config profile
+openspec update
+```
+
+---
+
 ## Exercise 1 — Weekly Forecast
 
 **Time:** ~12 minutes
