@@ -1,7 +1,7 @@
 # current-weather Specification
 
 ## Purpose
-TBD - created by archiving change initial-weather-app. Update Purpose after archive.
+Defines requirements for fetching and displaying current weather conditions for a fixed city on application load.
 ## Requirements
 ### Requirement: Display current weather for a fixed city
 The system SHALL fetch and display current weather conditions for a hardcoded city (Saint Louis) on application load.

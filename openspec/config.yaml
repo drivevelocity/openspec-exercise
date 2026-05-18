@@ -1,20 +1,35 @@
 schema: spec-driven
 
-# Project context (optional)
-# This is shown to AI when creating artifacts.
-# Add your tech stack, conventions, style guides, domain knowledge, etc.
-# Example:
-#   context: |
-#     Tech stack: TypeScript, React, Node.js
-#     We use conventional commits
-#     Domain: e-commerce platform
+context: |
+  Training exercise: a simple Angular weather app used to teach spec-driven development.
+  Prioritize readability and simplicity over production patterns.
 
-# Per-artifact rules (optional)
-# Add custom rules for specific artifacts.
-# Example:
-#   rules:
-#     proposal:
-#       - Keep proposals under 500 words
-#       - Always include a "Non-goals" section
-#     tasks:
-#       - Break tasks into chunks of max 2 hours
+  Tech stack: Angular 20 (standalone), TypeScript, RxJS, Open-Meteo API (no auth)
+
+  Angular practices:
+  - Use standalone components — no NgModules
+  - Manage component state with signals
+  - Use inject() for dependency injection, not constructor params
+  - HTTP calls belong in services only — components receive typed objects
+  - Keep component hierarchy flat; avoid nesting for simple UIs
+
+rules:
+  proposal:
+    - Start with "the why" — what problem does this solve for the user?
+    - Include a Goals / Non-Goals section
+    - Keep it under 300 words
+
+  design:
+    - Document the key decision and at least one alternative you rejected
+    - Include a Risks / Trade-offs section
+
+  tasks:
+    - Group tasks by layer (e.g. service, component, template) — one group per chunk
+    - Each group must be independently verifiable by running the app
+    - No group should require more than 3 files to change
+
+  verify:
+    - Run `ng test --watch=false --browsers=ChromeHeadless` before anything else
+    - A failing test suite is a CRITICAL issue — do not proceed until all tests pass
+    - For each spec scenario, check that a corresponding test exists; flag missing coverage as WARNING
+    - Static analysis (keyword search, file inspection) is secondary — tests are the primary evidence
