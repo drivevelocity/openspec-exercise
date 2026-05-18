@@ -1,0 +1,4 @@
+# Trainer-only files — excluded from Cursor context and indexing.
+# Participants should not receive hints or training notes via AI assistance.
+hints/
+TRAINING-PLAN.md

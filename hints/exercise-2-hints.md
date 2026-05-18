@@ -4,28 +4,18 @@ Work through these one at a time. Try the exercise again after each hint before 
 
 ---
 
-**Hint 1 — Think about the browser API**
+**Hint 1 — The most important decision goes in the proposal**
 
-The browser has a built-in API for getting the user's physical location. What does it return? What are the two ways it can fail? Write those failure cases into your spec before you describe any UI.
-
----
-
-**Hint 2 — Your spec needs at least three states**
-
-A good spec for this feature should describe what the UI looks like in each of these situations:
-- While waiting for the location (loading)
-- When the location was retrieved successfully (show weather)
-- When something went wrong — permission denied, or detection failed (show an error)
-
-If your spec only describes the happy path, go back and add the error states.
+Before describing any UI or implementation, your proposal should answer: how does the app determine the user's location? Think about the trade-offs of each approach and pick one. That decision shapes everything else in the spec.
 
 ---
 
-**Hint 3 — Connecting location to weather**
+**Hint 2 — Your spec needs to cover the unhappy paths**
 
-Browser geolocation returns `latitude` and `longitude` directly. You can pass those straight to the Open-Meteo forecast URL — no geocoding step needed. Your spec should describe this data flow: geolocation → coordinates → weather API call.
+A good spec for this feature describes what the UI looks like in each situation, not just the happy path. Think about what can go wrong with your chosen approach and make sure each failure case has a defined outcome in your spec.
 
-The relevant Open-Meteo URL shape is:
-```
-https://api.open-meteo.com/v1/forecast?latitude=<lat>&longitude=<lon>&current=temperature_2m,...
-```
+---
+
+**Hint 3 — Let the design artifact capture the rationale**
+
+The design artifact is the right place to record *why* you chose your approach over the alternatives. Future contributors (and your future self) will thank you. If you're not sure what to put there, write down the option you *didn't* pick and why.

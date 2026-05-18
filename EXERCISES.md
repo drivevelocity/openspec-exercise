@@ -131,12 +131,9 @@ The app currently shows weather for a hardcoded city. Users should see weather f
 ```
 
 Think through the following as you fill in each artifact:
-- What triggers location detection? (on load? on button click?)
-- What does the UI show while waiting for the location?
-- What happens if the user denies the location permission?
-- What happens if location detection times out or fails?
-
-> **Tip:** Browser geolocation returns coordinates directly — no geocoding step needed. Your spec should describe this data flow: geolocation → coordinates → weather API call.
+- How does the app know where the user is? There is more than one answer — pick one and justify it in your proposal.
+- What does the UI show while the location is being determined?
+- What happens when something goes wrong?
 
 Keep running `/opsx-continue` until all artifacts are complete.
 
@@ -165,7 +162,7 @@ git commit -m "spec: user-location artifacts"
 /opsx-verify user-location
 ```
 
-Pay particular attention to the error states — verify that denied permission and timeout failures are actually handled in the generated code, not just described in the spec.
+Pay particular attention to the error and edge cases — verify they are actually handled in the generated code, not just described in the spec.
 
 ---
 

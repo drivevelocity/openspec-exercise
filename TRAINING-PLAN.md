@@ -172,9 +172,9 @@ Also briefly explain the cycle they'll follow in each exercise: start a change, 
 
 **Checkpoint hints (in `hints/exercise-2-hints.md`):**
 
-- *Hint 1:* Think about the browser API that exposes geolocation. What does it return? What can go wrong?
-- *Hint 2:* Your spec needs at least three states: loading, success, and error/denied
-- *Hint 3:* Browser geolocation returns coordinates directly — no geocoding step needed
+- *Hint 1:* The proposal should answer how the app determines the user's location — there's more than one valid approach
+- *Hint 2:* The spec should cover failure/edge cases, not just the happy path
+- *Hint 3:* The design artifact is the right place to record why one approach was chosen over alternatives
 
 ---
 
