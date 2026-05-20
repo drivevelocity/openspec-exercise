@@ -38,6 +38,15 @@ ng serve
 
 2. Open http://localhost:4200 — you should see current weather for St. Louis, Missouri.
 
+### Recommended AI tooling
+
+These tools are optional, but recommended if your AI coding environment supports MCP servers and slash-command skills:
+
+- Install the Angular best practices MCP server from https://angular.dev/ai/mcp#.
+- Install the `/angular-developer` skill from https://github.com/angular/skills.
+
+They help AI assistants follow current Angular guidance while working through the OpenSpec exercises, but the app and lab instructions do not require them.
+
 ## Lab exercises
 
 See [EXERCISES.md](EXERCISES.md) for the hands-on tasks.

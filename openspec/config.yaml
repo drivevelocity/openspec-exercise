@@ -12,6 +12,7 @@ context: |
   - Use inject() for dependency injection, not constructor params
   - HTTP calls belong in services only — components receive typed objects
   - Keep component hierarchy flat; avoid nesting for simple UIs
+  - Utilize the Angular Best Practices MCP and /angular-developer skills to guide development
 
 rules:
   proposal:
