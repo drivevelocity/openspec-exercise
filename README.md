@@ -38,6 +38,16 @@ ng serve
 
 2. Open http://localhost:4200 — you should see current weather for St. Louis, Missouri.
 
+### Included AI tooling
+
+This repo already includes optional AI tooling for environments that support MCP servers and slash-command skills:
+
+- Cursor users get project MCP setup from `.cursor/mcp.json`, which starts the Angular CLI MCP server with `npx -y @angular/cli mcp`.
+- Cursor and Claude Code users get a repo-local copy of the canonical `/angular-developer` skill and references from https://github.com/angular/skills.
+- Other tools can still install the latest upstream `/angular-developer` skill directly from https://github.com/angular/skills if they do not read repo-local skills.
+
+They help AI assistants follow current Angular guidance while working through the OpenSpec exercises, but the app and lab instructions do not require them.
+
 ## Lab exercises
 
 See [EXERCISES.md](EXERCISES.md) for the hands-on tasks.

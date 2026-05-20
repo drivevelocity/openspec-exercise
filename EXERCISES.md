@@ -62,15 +62,10 @@ This scaffolds the change directory and shows you the first artifact to fill in 
 
 ### Step 2 — Build the spec artifacts
 
-Run `/opsx-continue` once per artifact until all are created:
-```
-/opsx-continue weekly-forecast
-```
-
 The spec-driven workflow produces these artifacts in order:
 1. **Proposal** — what you want to build and why
-2. **Spec** — requirements and scenarios for each capability
-3. **Design** — technical decisions and implementation approach
+2. **Design** — technical decisions and implementation approach
+3. **Spec** — requirements and scenarios for each capability
 4. **Tasks** — a checklist of implementation steps
 
 Think through the following as you fill in each artifact:
@@ -79,7 +74,10 @@ Think through the following as you fill in each artifact:
 - How should it look on screen? (list? cards? something else?)
 - What if the forecast data is unavailable?
 
-Keep running `/opsx-continue` until Cursor tells you all artifacts are complete.
+Run `/opsx-continue` once per artifact until all are created:
+```
+/opsx-continue weekly-forecast
+```
 
 ---
 
@@ -155,14 +153,14 @@ The app currently shows weather for a hardcoded city. Users should see weather f
 
 ### Step 2 — Build the spec artifacts
 
-```
-/opsx-continue user-location
-```
-
 Think through the following as you fill in each artifact:
 - How does the app know where the user is? There is more than one answer — pick one and justify it in your proposal.
 - What does the UI show while the location is being determined?
 - What happens when something goes wrong?
+
+```
+/opsx-continue user-location
+```
 
 Keep running `/opsx-continue` until all artifacts are complete.
 

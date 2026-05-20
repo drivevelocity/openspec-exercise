@@ -12,6 +12,8 @@ context: |
   - Use inject() for dependency injection, not constructor params
   - HTTP calls belong in services only — components receive typed objects
   - Keep component hierarchy flat; avoid nesting for simple UIs
+  - If available, use the Angular CLI MCP server and /angular-developer skill to guide development
+  - After Angular code changes, run `ng build` and fix build errors before considering work complete
 
 rules:
   proposal:
@@ -30,6 +32,6 @@ rules:
 
   verify:
     - Run `ng test --watch=false --browsers=ChromeHeadless` before anything else
-    - A failing test suite is a CRITICAL issue — do not proceed until all tests pass
+    - A failing test suite or build is a CRITICAL issue — do not proceed until fixed
     - For each spec scenario, check that a corresponding test exists; flag missing coverage as WARNING
     - Static analysis (keyword search, file inspection) is secondary — tests are the primary evidence
