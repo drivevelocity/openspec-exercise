@@ -7,13 +7,15 @@ A spec is a short, structured description of what you want to build. It makes yo
 
 Each exercise follows the same full cycle:
 
-> **new** → **continue** (repeat until ready) → commit → **apply** → **verify** → **sync** → **archive**
+> **new** → **continue** (repeat until ready) → commit (spec) → **apply** → **verify** → **sync** → **archive** → commit (impl)
 
 ---
 
 ## About this setup
 
 This repo uses the **expanded OpenSpec workflow** — the full command set, configured for explicit step-by-step artifact authoring. This is intentional for learning, but it is not what you get from a default `openspec init` in a fresh repo.
+
+**Note:** Profile configuration is **tool-agnostic** — it lives in your repo's OpenSpec config, not in Cursor, Claude Code, or any other editor. The `/opsx:*` steps below are the same workflow no matter how your tool exposes them (slash commands, skills, CLI, etc.).
 
 **Default (`core` profile) — what a fresh install provides:**
 
@@ -52,10 +54,18 @@ The app shows only today's conditions. Users want to plan ahead and see the week
 
 ### Step 1 — Start the change
 
-In Cursor, run:
+In your AI tool, run:
 ```
 /opsx-new weekly-forecast
 ```
+
+You can optionally add a short description of the feature after the change name — it gives the AI more context when scaffolding the first artifact:
+
+```
+/opsx-new weekly-forecast 
+Show the next 7 days of weather below today's conditions
+```
+
 This scaffolds the change directory and shows you the first artifact to fill in (a proposal).
 
 ---
@@ -111,6 +121,8 @@ Cursor will work through the task checklist from your spec and generate the code
 
 This checks that the implementation matches your spec: all tasks completed, requirements covered, design decisions followed. Fix any critical issues before continuing.
 
+Run your manual tests now.
+
 ---
 
 ### Step 6 — Sync specs to the main spec store
@@ -133,6 +145,19 @@ The change is moved to the archive. The implementation is live, the spec is in t
 
 ---
 
+### Step 8 — Commit the implementation
+
+Commit the generated code and any OpenSpec updates from sync and archive:
+
+```bash
+git add src/ openspec/
+git commit -m "feat: weekly-forecast implementation"
+```
+
+This pairs with the spec commit in Step 3: one commit for what you planned, one for what you built.
+
+---
+
 ## Exercise 2 — Weather for Your Location
 
 **Time:** ~15 minutes
@@ -147,6 +172,7 @@ The app currently shows weather for a hardcoded city. Users should see weather f
 
 ```
 /opsx-new user-location
+(Optionally provide details here)
 ```
 
 ---
@@ -206,6 +232,19 @@ Pay particular attention to the error and edge cases — verify they are actuall
 ```
 /opsx-archive user-location
 ```
+
+---
+
+### Step 8 — Commit the implementation
+
+Commit the generated code and any OpenSpec updates from sync and archive:
+
+```bash
+git add src/ openspec/
+git commit -m "feat: user-location implementation"
+```
+
+This pairs with the spec commit in Step 3: one commit for what you planned, one for what you built.
 
 ---
 
